@@ -1,0 +1,33 @@
+  .Container_buttons{
+    position: absolute;
+    top: 235px;
+    right: 100px;
+    width: 70px;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  
+  }
+  
+  .button{
+    width: 70px;
+    height: 60px;
+    background-color: #211c2f;
+    border-radius: 50%;
+    box-shadow: 4px 4px 10px #000000;
+  }
+  
+  .button:active{
+    background-color: #f6f6e7;
+  }
+  
+  .fas{
+    font-size: 45px;
+    color: #fff;
+  }
+  
+  .fas:active{
+    color: #8d8dc3;
+  }

@@ -1,0 +1,21 @@
+.square{
+    position: absolute;
+    top: 135px;
+    width: 400px;
+    height: 400px;
+    border: 1px solid #000000;
+    left: 53%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    box-shadow: 5px 5px 10px #000000;
+  }
+  
+  .square_item{
+    border: 1px solid rgb(200, 200, 200);
+    height: calc((100%)/ 10);
+    width: calc((100%)/10);
+    background-color: #fff5ff;
+  }
+  
+  
