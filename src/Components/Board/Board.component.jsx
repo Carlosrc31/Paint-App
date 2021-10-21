@@ -22,8 +22,9 @@ function Board(props){
        return handleDiv(event); 
     }
 
-    function handleDown(){
+    function handleDown(event){
         setMouseDown(true)
+       handleDiv(event);
     }
 
     function handleUp(){
@@ -45,7 +46,6 @@ function Board(props){
                         onMouseOver = {handleOver}
                         onMouseDown = {handleDown}
                         onMouseUp = {handleUp}
-                        // disabled= {props.auxVar}
                         style={{
                             backgroundColor: ele.color,
                             }}
