@@ -3,7 +3,9 @@ import "./Templates.css"
 
 function Templates(props){
 
+    //Variable para cambiar el color de la cara en caso de que se seleccione el blanco
     const changeColor = props.selectedColor === "#ffffff" ? "#000": "#fff";
+
     let arrayHappy = [22,23,26,27,32,33,36,37,51,58,61,62,67,68,72,73,74,75,76,77];
     function handleHappy(){
         props.setCellsState(
