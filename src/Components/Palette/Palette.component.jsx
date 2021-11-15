@@ -15,7 +15,7 @@ function Palette(props){
         try {
             props.setIsReady("loading");
             //Llamar a la API
-            const response = await axios.get('http://www.colr.org/json/colors/random/10');
+            const response = await axios.get('https://www.colr.org/json/colors/random/10');
             //Guardar en una los valores en una variable auxiliar
             const aux = response.data.matching_colors;
             //Hacer otro arreglo con los mismo valores pero agregando el carácter # para hacerlo color
