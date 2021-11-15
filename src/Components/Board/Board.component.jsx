@@ -30,33 +30,39 @@ function Board(props){
     function handleUp(){
         setMouseDown(false)
     }
-
-
-    return (
-        <React.Fragment>
-            <div className="square" ref={props.ss} >
-                {props.cellsState.map((ele) => 
-                {
-                    return (
-                        <div
-                        className="square_item"
-                        id = {ele.id}
-                        key = {ele.id}
-                        onClick={handleDiv}
-                        onMouseOver = {handleOver}
-                        onMouseDown = {handleDown}
-                        onMouseUp = {handleUp}
-                        style={{
-                            backgroundColor: ele.color,
-                            }}
-                        >
-                        </div>
+    if(props.isReady === "loading" || props.isReady === "idle"){
+        return null
+    }
+    else if (props.isReady === "failed"){
+        return null
+    }
+    else{  
+        return (
+            <React.Fragment>
+                <div className="square" ref={props.ss} >
+                    {props.cellsState.map((ele) => 
+                    {
+                        return (
+                            <div
+                            className="square_item"
+                            id = {ele.id}
+                            key = {ele.id}
+                            onClick={handleDiv}
+                            onMouseOver = {handleOver}
+                            onMouseDown = {handleDown}
+                            onMouseUp = {handleUp}
+                            style={{
+                                backgroundColor: ele.color,
+                                }}
+                            >
+                            </div>
+                        )}
                     )}
-                )}
-    
-            </div>
-        </React.Fragment>
-    );
+
+                </div>
+            </React.Fragment>
+        );
+    }
 }
 
 export default Board;

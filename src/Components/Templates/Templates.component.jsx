@@ -43,15 +43,23 @@ function Templates(props){
         )
     }
 
-    return (
-        <Fragment>
-            <div className="Container_buttons">
-                <button className="button Happy" onClick={handleHappy} > <i className="fas fa-smile"></i> </button>
-                <button className="button Sad" onClick={handleSad} > <i className="fas fa-sad-tear"> </i></button>
-                <button className="button Serious" onClick={handleSerious} > <i className="fas fa-meh"></i> </button>
-            </div>
-        </Fragment>
-    )
+    if(props.isReady === "loading" || props.isReady === "idle"){
+        return null
+    }
+    else if (props.isReady === "failed"){
+        return null
+    }
+    else{  
+        return (
+            <Fragment>
+                <div className="Container_buttons">
+                    <button className="button Happy" onClick={handleHappy} > <i className="fas fa-smile"></i> </button>
+                    <button className="button Sad" onClick={handleSad} > <i className="fas fa-sad-tear"> </i></button>
+                    <button className="button Serious" onClick={handleSerious} > <i className="fas fa-meh"></i> </button>
+                </div>
+            </Fragment>
+        )
+    }
 }
 
 export default Templates;
